@@ -1,0 +1,113 @@
+@import 'vars.scss';
+
+html {
+  font-family: 'Oswald';
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body {
+  scroll-behavior: smooth;
+  // overflow: hidden;
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
+  left: 0px;
+
+  background-color: $black_color;
+  color: $white_color;
+}
+
+a {
+  color: $white_color;
+  text-decoration: none;
+}
+
+
+.dg.ac {
+  z-index: 10000 !important;
+}
+
+@import 'gui_extend.scss';
+@import 'scrollbar.scss';
+
+@import 'btn.scss';
+@import 'header.scss';
+
+
+@import '3_line_cahrs.scss';
+
+@import 'big_title.scss';
+
+@import 'table.scss';
+/* 
+@function dHeight($height) {
+  $result: $height + 100;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+} */
+
+#canvas_container {
+  z-index: -1;
+  position: fixed;
+  top: 125px;
+
+  // @media screen and (min-width: $width_2) {
+  //   top: 2px; 
+  // }
+
+  // @media screen and (max-width: $width_3) {
+  //   top: 253px;
+  // }
+
+  width: 1140px;
+  height: 949px;
+
+  left: calc(50vw - 1140px/2 - 1px);
+
+  @media screen and (max-width: $width_2) {
+    width: 76vw;
+    height: 63vw;
+    left: calc(50vw - 76vw/2);
+  }
+
+  @media screen and (max-width: $width_3) {
+    width: 120vw;
+    height: 99vw;
+    left: calc(50vw - 120vw/2 + 6px);
+  }
+
+
+  @media screen and (max-height: 650px) {
+    top: 30vh;
+  }
+}
+
+#example {
+  position: absolute;
+  background: url("./../public/assets/example_back.jpg") no-repeat no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+#canvas {
+  position: absolute;
+}
+
+#orbitControl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#effectAsci {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}

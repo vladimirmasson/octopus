@@ -1,0 +1,59 @@
+.header {}
+
+a.logo {
+    position: relative;
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    left: 20px;
+    top: 20px;
+    background: url('./../public/assets/logo.png') no-repeat no-repeat;
+    background-size: contain;
+
+    // background-color: aqua;
+    @media screen and (max-width: $width_2) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.home_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    white-space: nowrap;
+
+    left: 20px;
+    top: 20px;
+    
+    position: absolute;
+    z-index: 1;
+    // display: block;
+
+
+
+    background: url("./../public/assets/corner_button.svg") no-repeat no-repeat center;
+    background-size: contain;
+
+
+    width: 179px;
+    height: 58px;
+    font-size: 12px;
+    font-weight: 400;
+
+
+    @media screen and (max-width: $width_2) {
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: $width_2) {
+        font-size: 18px;
+        width: 259px;
+        height: 58px;
+    }
+
+}
